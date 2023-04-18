@@ -50,6 +50,7 @@ scrollLinks.forEach((link) => {
     // navigate to specific spot
     const id = e.currentTarget.getAttribute("href").slice(1);
     const element = document.getElementById(id);
+    // console.log(element.offsetTop);
     
 
     // calculate the heights
@@ -62,7 +63,7 @@ scrollLinks.forEach((link) => {
     
     if (window.innerWidth < 800) {
       if (!fixedNav) {
-        position = position - 142;
+        position = position - 177;
       }
       if (navHeight > 82) {
         position = position + containerHeight;
@@ -80,3 +81,67 @@ scrollLinks.forEach((link) => {
     linksContainer.style.height = 0;
   })
 })
+
+
+
+
+// slider for mile stone //
+
+let slideCount = 1;
+showSlides(slideCount);
+
+function addSlides(n) {
+  showSlides(slideCount += n);
+}
+
+function currSlide(n){
+  showSlides(slideCount = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) {
+    slideCount = 1;
+  }
+  if (n < 1) {
+    slideCount = slides.length;
+  }
+
+  for (i = 0; i < slides.length; i++){
+    slides[i].style.display = "none";
+  }
+
+  for (i = 0; i < dots.length; i++){
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideCount - 1].style.display = "block";
+  dots[slideCount - 1].className += " active";
+}
+
+
+// auto slide show
+
+let slideIndex = 0;
+
+
+function autoSlide() {
+
+
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  for (i = 0; i < slides.length; i++){
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(autoSlide, 3000);
+}
+
+autoSlide();

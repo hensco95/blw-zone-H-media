@@ -27,7 +27,6 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  color: white;
   text-transform: uppercase;
 }
 
@@ -41,7 +40,6 @@ h4 {
 
 p {
   margin-bottom: 1.25rem;
-  color: white;
   line-height: 2rem;
 }
 
@@ -57,12 +55,14 @@ button{
 }
 
 body{
-  background-color: purple;
   font-family: 'Montserrat', sans-serif;
 }
 header{
   min-height: 100vh;
-  background:linear-gradient(120.61deg, #9b0573 33.94%, rgba(19, 19, 252, 0) 100%), url(/Images/header.png) center/cover no-repeat;
+  background:url(/Images/header.png) center/cover no-repeat;
+}
+header h2{
+  font-size: 1.2rem;
 }
 
 nav{
@@ -109,6 +109,7 @@ li{
   color: white;
   cursor: pointer;
   transition: all 0.3s linear;
+  font-size: 0.8rem;
 }
 .links a:hover{
   color:#9B0573;
@@ -144,7 +145,7 @@ li{
   display: grid;
   place-items: center;
   padding: 0.5rem 0rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   background-color: rgba(35, 42, 65, 0.88);
 }
 .doings img{
@@ -155,7 +156,7 @@ li{
 #about{
   display: grid;
   text-align: center;
-  color: white;
+  /* color: white; */
   margin-top: 2rem;
   padding: 0.5rem 2rem;
 }
@@ -165,25 +166,29 @@ li{
 #about p{
   line-height: 2rem;
 }
+.about_img img {
+  width: 100%;
+}
+
 
 /* #about h2{
   margin-bottom: 0;
 } */
-.b_1{
-  width: 100px;
+.side_line{
+  width: 60px;
   height: 2px;
   margin: 0 auto;
-  background-color: black;
+  background-color: #000000d6;;
   border-radius: 10px;
   margin-bottom: 1rem !important;
 }
 
 
 #impact{
-  background: url(/Images/impact.png) center/cover no-repeat;
+  /* background: url(/Images/impact.png) center/cover no-repeat; */
   display: grid;
   text-align: center;
-  color: white;
+  /* color: white; */
   padding: 2rem;
 }
 #impact h2{
@@ -231,10 +236,104 @@ li{
   border-radius: 50%;
 }
 
+#mile_wrap{
+  /* background-color: rgba(0, 0, 0, 0.575); */
+  display: grid;
+  /* height: 50vh; */
+    /* text-align: center; */
+    /* color: white; */
+    /* margin-top: 2rem; */
+    padding: 2rem;
+}
+.achieve{
+  text-align: center;
+  display: grid;
+}
+
+#mile{
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.slides{
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #9B0573;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slide_txt{
+  position: absolute;
+  font-weight: 900;
+  font-size: 0.8rem;
+  padding: 0.3rem;
+  color: purple;
+  background-color: white;
+  width: 50% !important;
+  bottom: 1.2rem;
+  width: 100%;
+  right: 0px;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover{
+  background-color: black;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
 #sub{
   display: grid;
   text-align: center;
-  color: white;
+  /* color: white; */
   margin-top: 2rem;
   padding: 0.5rem 2rem;
 }
@@ -418,13 +517,22 @@ footer a{
   .doings{
     grid-template-columns: repeat(4,1fr);
   }
-<<<<<<< HEAD
-=======
+
+
 
   #about{
     padding: 5rem;
   }
->>>>>>> 1aeee5d (added some files)
+  .about_wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+    .about_txt {
+      text-align: left;
+    }
+  
   #impact{
     padding:2rem 5rem;
   }
@@ -436,10 +544,7 @@ footer a{
   }
   .person_wrap{
     grid-template-columns: repeat(2,1fr);
-<<<<<<< HEAD
-=======
     grid-row-gap: 2rem;
->>>>>>> 1aeee5d (added some files)
   }
   .person p{
     padding: 0rem 2rem;
