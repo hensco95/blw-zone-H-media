@@ -7,6 +7,7 @@
   padding: 0;
   margin: 0;
 }
+
 html{
   scroll-behavior: smooth;
 }
@@ -185,56 +186,90 @@ li{
 
 
 #impact{
-  /* background: url(/Images/impact.png) center/cover no-repeat; */
-  display: grid;
-  text-align: center;
-  /* color: white; */
-  padding: 2rem;
+  padding: 1rem 0rem;
+  min-height: 60vh;
+  
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 #impact h2{
   margin-bottom: 1rem;
 }
-.person_wrap{
-  display: grid;
-  grid-gap: 1.5rem;
+
+.container{
+    position: relative;
+  max-width: 800px;
+  width: 100%;
+    /* background: #9B0573; */
+    padding: 1.3rem 0.2rem;
+}
+.slide-container{
+  margin: 0 30px;
+  overflow: hidden;
 }
 
-.person{
-  background-color: white;
-  color: black;
-  padding: 1rem;
-  border-radius: 15px;
+
+
+.card{
+  /* background-color: white; */
+    padding: 1rem;
+    width:auto;
+    margin: 0 auto;
+    /* height: 200px; */
+    /* padding-right: 3rem; */
+    border-radius: 8px;
+    background: radial-gradient(circle at 52.1% -29.6%, rgb(144, 17, 105) 0%, rgb(51, 0, 131) 100.2%);
+    color: white;
+    /* width: 300px; */
 }
-.person p{
-  color: black;
-  font-size: 0.8rem;
-  font-weight: 500;
-  line-height: 1.5rem;
-  text-align: center;
-}
-.person_logo{
+/* .card .txt-box{
+  width: 300px;
+} */
+.card .profile-details{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  column-gap: 0.8rem;
 }
-.p_img{
-  width: 60px;
-  height: 60px;
-  border: 1px solid #9b0573;
+
+.card .profile-details img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid purple;
+}
+
+.card p{
+  font-size: 0.7rem;
+  line-height: 1.1rem;
+}
+.name-position h4, .name-position p{
+  margin-bottom: 0;
+}
+
+.swiper-navBtn{
+  color: white;
+  height: 30px;
+  width: 30px;
+  background: purple;
   border-radius: 50%;
 }
-.person_logo h4{
-  margin-bottom:  0 !important;
+.swiper-navBtn::before,.swiper-navBtn::after{
+  font-size: 18px;
 }
-.quote{
-  width: 50px;
-  height: 50px;
-  position: relative;
-  bottom: 30px;
-  right: 5rem;
-  background-color:  #807AFF;
-  border-radius: 50%;
+.dots::before, .dots::after{
+  color: #9B0573;
 }
+
+
+
+
+
+
+
 
 #mile_wrap{
   /* background-color: rgba(0, 0, 0, 0.575); */
@@ -444,10 +479,7 @@ footer a{
 }
 
 @media screen and (min-width:700px){
-  .person_wrap {
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 1rem;
-  }
+  
 
     h1 {
       font-size: 3.5rem;
@@ -533,22 +565,9 @@ footer a{
       text-align: left;
     }
   
-  #impact{
-    padding:2rem 5rem;
-  }
-  /* #about,#sub{
-    padding: 3rem;
-  } */
-  .person{
-    max-width: 550px;
-  }
-  .person_wrap{
-    grid-template-columns: repeat(2,1fr);
-    grid-row-gap: 2rem;
-  }
-  .person p{
-    padding: 0rem 2rem;
-  }
+  
+  
+  
   .sub_p{
     border-bottom: 0;
   }
