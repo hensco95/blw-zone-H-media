@@ -130,6 +130,7 @@ let slideIndex = 0;
 
 function autoSlide() {
 
+    let dots = document.getElementsByClassName("dot");
 
   let i;
   let slides = document.getElementsByClassName("slide");
@@ -171,12 +172,15 @@ var swiper = new Swiper(".slide-container", {
     0: {
       slidesPerView:1,
     },
-    520: {
+    500: {
       slidesPerView:1
     },
     650: {
-      slidesPerView:2
+      slidesPerView:1
     },
+    700: {
+      slidesPerView:2
+    }
     // 900: {
     //   slidesPerView:3
     // }
