@@ -193,9 +193,9 @@ li{
 
 
 #impact{
-  /* padding: 1rem 0rem; */
+  padding: 2rem 0rem;
   margin-top: 2rem;  
-  height: 100vh;
+  /* height: 100vh; */
   text-align: left;
   display: flex;
   align-items: center;
