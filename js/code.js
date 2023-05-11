@@ -142,7 +142,7 @@ function autoSlide() {
     slideIndex = 1;
   }
   slides[slideIndex - 1].style.display = "block";
-  setTimeout(autoSlide, 3000);
+  setTimeout(autoSlide, 5000);
 }
 
 autoSlide();
@@ -161,7 +161,7 @@ var swiper = new Swiper(".slide-container", {
     clickable: true,
   },
   autoplay: {
-    delay: 2000,
+    delay: 5000,
     disableOnInteraction: false,
   },
   navigation: {
