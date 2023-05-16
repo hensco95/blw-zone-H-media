@@ -511,6 +511,10 @@ li{
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
   }
+    .person:nth-child(4) {
+      grid-row: auto;
+      grid-column: auto;
+    }
     .person:nth-child(5) {
       grid-column: 1 / span 4;
       justify-self: center;
@@ -523,6 +527,7 @@ li{
   }
     .person:nth-child(5) {
       grid-column: auto;
+      grid-row: auto;
       
     }
   /* .person{
